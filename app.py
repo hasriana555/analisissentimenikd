@@ -104,7 +104,7 @@ stemmer, all_sw, slang = load_preprocessing_tools()
 # =============================================
 # TAMPILAN
 # =============================================
-st.title("📱 Analisis Sentimen Ulasan Aplikasi IKD")
+st.title("Analisis Sentimen Ulasan Aplikasi IKD")
 st.markdown(
     "Prediksi sentimen ulasan pengguna aplikasi "
     "**Identitas Kependudukan Digital (IKD)** menggunakan "
@@ -114,7 +114,7 @@ st.markdown(
 st.divider()
 
 # ===== INPUT =====
-st.subheader("📝 Input Ulasan")
+st.subheader("Input Ulasan📝")
 ulasan = st.text_area(
     label       = "Masukkan ulasan pengguna aplikasi IKD:",
     placeholder = "Contoh: Aplikasi sangat membantu, tidak perlu bawa KTP fisik...",
@@ -207,9 +207,9 @@ st.divider()
 # ===== INFO DATASET =====
 st.subheader("📂 Informasi Dataset")
 col1, col2, col3 = st.columns(3)
-col1.metric("Total Data",   "3.031")
-col2.metric("Positif",      "1.212")
-col3.metric("Negatif",      "1.867")
+col1.metric("Total Data",   "3.055")
+col2.metric("Positif",      "1.195")
+col3.metric("Negatif",      "1.860")
 
 st.caption(
     "Data diambil dari Google Play Store aplikasi IKD "
