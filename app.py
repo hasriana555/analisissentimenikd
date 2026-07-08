@@ -141,18 +141,17 @@ if prediksi_btn:
             if teks_bersih.strip() == '':
                 st.error("❌ Teks tidak dapat diproses. Coba masukkan ulasan yang lebih lengkap.")
             else:
-                else:
-                    teks_tfidf = tfidf.transform([teks_bersih])
+                teks_tfidf = tfidf.transform([teks_bersih])
 
-                    # Validasi: tidak ada kata yang dikenali model
-                    if teks_tfidf.nnz == 0:
-                        st.warning(
-                            "⚠️ Ulasan tidak dapat diprediksi karena tidak mengandung kata yang dikenali oleh model."
-                        )
+                # Validasi: tidak ada kata yang dikenali model
+                if teks_tfidf.nnz == 0:
+                    st.warning(
+                        "⚠️ Ulasan tidak dapat diprediksi karena tidak mengandung kata yang dikenali oleh model."
+                    )
                     st.stop()
 
-                    hasil = model.predict(teks_tfidf)[0]
-                    decision_score = model.decision_function(teks_tfidf)[0]
+                hasil = model.predict(teks_tfidf)[0]
+                decision_score = model.decision_function(teks_tfidf)[0]
 
                 # Konversi ke confidence score
                 if hasil == 'Positif':
