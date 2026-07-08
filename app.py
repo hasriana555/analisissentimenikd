@@ -46,6 +46,9 @@ def load_preprocessing_tools():
     }
     all_stopwords = all_stopwords.union(custom_stopwords)
 
+    negasi = {'bukan', 'jangan', 'tanpa', 'tak', 'belum', 'kurang'}
+    all_stopwords = all_stopwords - negasi
+
     slang_dict = {
         'gak': 'tidak', 'ga': 'tidak', 'ngga': 'tidak',
         'nggak': 'tidak', 'gk': 'tidak', 'tdk': 'tidak',
