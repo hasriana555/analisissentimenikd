@@ -38,8 +38,8 @@ def load_preprocessing_tools():
     all_stopwords     = sastrawi_sw.union(nltk_sw)
 
     custom_stopwords = {
-        'app', 'apps', 'aplikasi', 'ikd', 'ktp', 'dukcapil',
-        'mobile', 'hp', 'android', 'update', 'versi', 'ya',
+        'app', 'apps', 'ktp', 'dukcapil', 
+        'mobile', 'hp', 'android', 'versi', 'ya',
         'yg', 'aja', 'sy', 'aku', 'ku', 'wae', 'aya', 'tee',
         'mah', 'atuh', 'euy', 'ae', 'rek', 'in', 'log',
         'astagfirullan', 'astaghfirullah', 'astagfirullah',
